@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap'); :root {
+    font-family: 'Zen Maru Gothic',sans-serif;
+    color: #34334f;
+    background: #fff7fb;
+    font-size: 16px
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at 95% 15%,#dceeff 0,transparent 42%),radial-gradient(ellipse at 0 75%,#ffe0ef 0,transparent 40%);
+    min-height: 100vh
+}
+
+header {
+    max-width: 1120px;
+    margin: auto;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #34334f
+}
+
+.brand span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 5px 0 0 27px;
+    color: #77738d
+}
+
+.badge,.tag {
+    font-size: 14px;
+    border: 1px solid #e4ddea;
+    padding: 9px 16px;
+    border-radius: 30px;
+    background: #ffffff99
+}
+
+main {
+    max-width: 1040px;
+    margin: 24px auto 60px;
+    padding: 0 24px
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 36px
+}
+
+.side {
+    padding-top: 20px
+}
+
+.side h1 {
+    font-size: 29px;
+    line-height: 1.6;
+    margin: 16px 0
+}
+
+.side p {
+    color: #77738d;
+    line-height: 1.9
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 36px
+}
+
+.step {
+    font-size: 14px;
+    color: #8b8497
+}
+
+.step.active {
+    color: #da3974;
+    font-weight: bold
+}
+
+.card {
+    background: white;
+    border: 1px solid #e9dfeb;
+    border-radius: 28px;
+    padding: 38px;
+    box-shadow: 0 12px 0 #eadfec55;
+    position: relative
+}
+
+.topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #79738d;
+    font-size: 14px
+}
+
+.tag {
+    background: #fff0f6;
+    border: 0;
+    color: #c13a70
+}
+
+.progress {
+    height: 7px;
+    background: #f1eaf2;
+    border-radius: 20px;
+    margin: 22px 0 34px;
+    overflow: hidden
+}
+
+.progress i {
+    display: block;
+    height: 100%;
+    background: #ff69a2;
+    transition: width .3s
+}
+
+.question {
+    font-size: 23px;
+    line-height: 1.8;
+    margin: 14px 0 28px;
+    font-weight: 700;
+    min-height: 114px
+}
+
+.eyebrow {
+    font-size: 14px;
+    color: #d8457d;
+    letter-spacing: 1px
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #756c83;
+    margin: 0 0 15px
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 9px
+}
+
+.answer {
+    height: 58px;
+    border: 1.5px solid #e6dbe9;
+    border-radius: 17px;
+    background: #fff;
+    color: #786983;
+    font: inherit;
+    cursor: pointer
+}
+
+.answer:hover {
+    background: #fff1f7;
+    border-color: #f48fba
+}
+
+.answer.selected {
+    background: #ff5c99;
+    color: white;
+    border-color: #ff5c99;
+    box-shadow: 0 4px 0 #e74481
+}
+
+.hint {
+    text-align: center;
+    font-size: 14px;
+    color: #91859c;
+    margin: 18px 0 30px
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center
+}
+
+button {
+    font: inherit;
+    cursor: pointer
+}
+
+.primary {
+    border: 0;
+    background: #353451;
+    color: white;
+    border-radius: 16px;
+    padding: 15px 29px;
+    font-weight: 700
+}
+
+.primary:disabled {
+    opacity: .35;
+    cursor: default
+}
+
+.secondary {
+    border: 1px solid #e7dfea;
+    background: white;
+    color: #756783;
+    border-radius: 16px;
+    padding: 13px 20px
+}
+
+.small {
+    font-size: 14px
+}
+
+.note {
+    border-top: 1px dashed #e4dbe7;
+    padding-top: 22px;
+    margin-top: 26px;
+    color: #8a7c92;
+    font-size: 14px;
+    line-height: 1.8
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #958799;
+    padding: 0 24px 30px
+}
+
+.result-title {
+    font-size: 42px;
+    color: #dd4680;
+    margin: 12px 0 2px;
+    letter-spacing: 4px
+}
+
+.result h2 {
+    font-size: 24px;
+    margin: 8px 0 20px
+}
+
+.result p {
+    line-height: 1.9
+}
+
+.bars {
+    display: grid;
+    gap: 21px;
+    margin: 30px 0
+}
+
+.bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 8px
+}
+
+.track {
+    height: 12px;
+    border-radius: 12px;
+    background: #f1ebf6;
+    overflow: hidden
+}
+
+.fill {
+    height: 100%;
+    background: #ff80b0;
+    border-radius: 12px
+}
+
+.section {
+    margin-top: 36px;
+    padding-top: 26px;
+    border-top: 1px dashed #e0d5e6
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px
+}
+
+.tile {
+    padding: 16px;
+    background: #f8f6ff;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.8
+}
+
+.tile strong {
+    display: block;
+    font-size: 16px
+}
+
+.profile {
+    white-space: pre-wrap;
+    background: #fff4f8;
+    padding: 22px;
+    border-radius: 18px;
+    font-size: 15px;
+    line-height: 1.9
+}
+
+.notice {
+    font-size: 14px;
+    color: #87758b
+}
+
+.toast {
+    color: #c2396c;
+    margin-top: 12px;
+    font-size: 14px
+}
+
+.result .actions {
+    flex-wrap: wrap;
+    margin-top: 22px
+}
+
+button:focus-visible,a:focus-visible {
+    outline: 3px solid #6898dc;
+    outline-offset: 4px
+}
+
+@media(max-width: 750px) {
+    header {
+        padding:22px 20px
+    }
+
+    .badge {
+        display: none
+    }
+
+    main {
+        margin-top: 5px;
+        padding: 0 16px
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 14px
+    }
+
+    .side {
+        padding: 0 10px
+    }
+
+    .side h1 {
+        font-size: 23px;
+        margin: 10px 0
+    }
+
+    .side p {
+        font-size: 14px;
+        margin: 8px 0
+    }
+
+    .steps {
+        flex-direction: row;
+        margin: 16px 0;
+        gap: 20px
+    }
+
+    .card {
+        padding: 26px 20px;
+        border-radius: 23px
+    }
+
+    .question {
+        font-size: 20px;
+        min-height: 128px
+    }
+
+    .answers {
+        gap: 6px
+    }
+
+    .answer {
+        height: 49px;
+        border-radius: 12px
+    }
+
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .primary {
+        padding: 14px 21px
+    }
+
+    .result-title {
+        font-size: 36px
+    }
+}
